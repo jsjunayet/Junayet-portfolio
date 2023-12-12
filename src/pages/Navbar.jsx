@@ -9,6 +9,11 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaSquareGithub } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
+import img3 from "../assets/programming-background-collage.jpg"
+import { useSpring, animated } from 'react-spring';
+import { FaChevronDown } from "react-icons/fa";
+
 
 
 const Navbar = () => {
@@ -16,6 +21,7 @@ const Navbar = () => {
     const handleToggle = () => {
         setActive(!isActive)
     }
+
 
     return (
         <div className='relative min-h-screen md:flex'>
@@ -57,13 +63,12 @@ const Navbar = () => {
                         </div>
                     </div >
                     <div className='flex flex-col justify-center text-2xl text-white items-center flex-1 mt-4 space-y-3' >
-                        <a>Home</a>
-                        <a>About Me</a>
-                        <a>What I Do</a>
-                        <a>Resume</a>
-                        <a>Portfolio</a>
-                        <a>Contact</a>
-
+                        <Link to={'/'}>Home</Link>
+                        <Link>About Me</Link>
+                        <Link>What I Do</Link>
+                        <Link>Resume</Link>
+                        <Link>Portfolio</Link>
+                        <Link>Contact</Link>
                     </div>
 
                 </div >
@@ -71,7 +76,7 @@ const Navbar = () => {
                 <div>
                     <hr />
 
-                    <button className='flex gap-3 justify-center text-white w-full items-center px-4 py-2 mt-5'>
+                    <button className='flex gap-3 justify-center text-white w-full items-center px-4 py-2 mt-4'>
                         <FaSquareFacebook className='text-3xl' />
                         <FaSquareGithub className='text-3xl' />
                         <FaTwitter className='text-3xl' />
@@ -81,7 +86,28 @@ const Navbar = () => {
                 </div>
             </div >
             <div className='flex-1  md:ml-64'>
-                <p className=''>there are six season in bangdesh banlashe i s a a lan</p>
+                <div className="hero min-h-screen" style={{ backgroundImage: `url(${img3})` }}>
+                    <div className="hero-overlay bg-opacity-80"></div>
+                    <div className="hero-content text-center text-neutral-content">
+                        <div className="max-w-md">
+                            <h1 className="mb-5 text-5xl font-bold">WELLCOME</h1>
+                            <div>
+
+                            </div>
+                            <button className="btn btn-outline btn-secondary text-2xl mt-4">Hire me</button>
+                            <div>
+                                <FaChevronDown className='text-4xl text-white ml-28 mt-20' />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                    <p className='text-3xl font-bold text-center mt-10'>Know Me More</p>
+                    <hr className='text-center bg-black h-1 w-20 mt-2 mx-auto' />
+
+
+                </div>
             </div>
         </div >
     );
