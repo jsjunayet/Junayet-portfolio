@@ -14,6 +14,7 @@ import img3 from "../assets/programming-background-collage.jpg"
 import { FaChevronDown } from "react-icons/fa";
 
 import { Typewriter } from 'react-simple-typewriter'
+import ShareTitle from '../Component/ShareTitle';
 
 
 const Navbar = () => {
@@ -85,8 +86,11 @@ const Navbar = () => {
                     <hr />
 
                     <button className='flex gap-3 justify-center text-white w-full items-center px-4 py-2 mt-4'>
-                        <FaSquareFacebook className='text-3xl' />
-                        <FaSquareGithub className='text-3xl' />
+                        <Link to={'https://www.facebook.com/jsjunayet73?mibextid=ZbWKwL'}>
+                            <FaSquareFacebook className='text-3xl' />
+                        </Link>
+                        <Link to={'https://github.com/jsjunayet'}><FaSquareGithub className='text-3xl' />
+                        </Link>
                         <FaTwitter className='text-3xl' />
                         <FaLinkedin className='text-3xl' />
 
@@ -106,7 +110,7 @@ const Navbar = () => {
                                     <span style={{ color: 'green', fontWeight: 'bold' }}>
                                         {/* Style will be inherited from the parent element */}
                                         <Typewriter
-                                            words={['JUNAYET SHIBLU', 'DEVELOPER', 'FONT-END DESIGNER', 'STUDENT OF CSE DEPARTMENT']}
+                                            words={['JUNAYET SHIBLU.', 'DEVELOPER.', 'FRONT-END DESIGNER.', 'STUDENT OF CSE DEPARTMENT.']}
                                             loop={true}
                                             cursor
                                             cursorStyle='|'
@@ -119,8 +123,8 @@ const Navbar = () => {
                                     </span>
                                 </h1>
                             </div>
-
-                            <button className="btn btn-outline btn-secondary text-2xl mt-4">Hire me</button>
+                            <p className='text-3xl font-semibold my-3'>based in Savar, Dhaka, Bangladesh</p>
+                            <button className="btn btn-outline btn-accent text-2xl mt-4">Hire me</button>
                             <div className='mt-20'>
                                 <FaChevronDown className='text-4xl text-green-600 mx-auto mt-10 focus: mb-5 ' />
                             </div>
@@ -128,17 +132,33 @@ const Navbar = () => {
                         </div>
 
                     </div>
-
                 </div>
-
-                <div className='flex-row relative text-center my-12 '>
-                    <h2 className='md:text-8xl text-6xl font-bold opacity-10 md:tracking-[20px] tracking-[9px]   text-light mb-0 mx-auto'>ABOUT ME</h2>
-                    <div className=' absolute md:left-96 left-20 md:-bottom-0 -bottom-1 '>
-                        <p className='md:text-5xl text-4xl font-semibold text-center mt-10'>know Me More</p>
-                        <hr className=' bg-green-400 h-1 w-20 mt-2 mx-auto' />
+                <div className='my-12'>
+                    <ShareTitle opactityTitle={"ABOUT ME"} Title={"Know Me More"}></ShareTitle>
+                </div>
+                <div className=' max-w-5xl mx-auto'>
+                    <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5'>
+                        <div className=' space-y-3 col-span-3'>
+                            <p className='text-3xl font-semibold'>I`m <span className='text-green-600'>Junayet Shiblu</span>, a Web Developer</p>
+                            <p className='text-xl'> Passionate MERN stack developer who loves making user-friendly Website . I enjoy working with others to turn tricky ideas into smart solutions. I`m dedicated and a good team player, ready to bring my skills to your projects. Excited about creating cool web stuff together!</p>
+                            <p className='text-xl'>
+                                Also I am studying computer science and engineering at National Institute of Textile Engineering and Research so my love for coding works differently.
+                            </p>
+                        </div>
+                        <div className=' space-y-4 col-span-2 text-xl'>
+                            <p><span className='font-bold text-xl'>Name :</span> Junayet Shiblu</p>
+                            <hr />
+                            <p><span className='font-bold text-xl'>Email :</span> junayetshiblu0@gmail.com</p>
+                            <hr />
+                            <p><span className='font-bold text-xl'>Age :</span> 21</p>
+                            <hr />
+                            <p><span className='font-bold text-xl'>From :</span> Savar, Dhaka, Bangladeshi</p>
+                            <hr />
+                            <a href="/public/junayet-shiblu.pdf" download="junayet resume.pdf">
+                                <button className=' btn btn-outline text-xl btn-accent'>Download CV</button>
+                            </a>
+                        </div>
                     </div>
-
-
                 </div>
             </div>
         </div >
