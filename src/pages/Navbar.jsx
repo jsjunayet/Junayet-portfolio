@@ -11,9 +11,9 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import { FaSquareGithub } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import img3 from "../assets/programming-background-collage.jpg"
-import { useSpring, animated } from 'react-spring';
 import { FaChevronDown } from "react-icons/fa";
 
+import { Typewriter } from 'react-simple-typewriter'
 
 
 const Navbar = () => {
@@ -21,6 +21,14 @@ const Navbar = () => {
     const handleToggle = () => {
         setActive(!isActive)
     }
+    // const handleType = (count: number) => {
+    //     // access word count number
+    //     console.log(count)}
+    //   }
+
+    //   const handleDone = () => {
+    //     console.log(`Done after 5 loops!`)
+    //   }
 
 
     return (
@@ -86,25 +94,49 @@ const Navbar = () => {
                 </div>
             </div >
             <div className='flex-1  md:ml-64'>
-                <div className="hero min-h-screen" style={{ backgroundImage: `url(${img3})` }}>
+                <div className="hero min-h-screen object-center" style={{ backgroundImage: `url(${img3})` }}>
                     <div className="hero-overlay bg-opacity-80"></div>
                     <div className="hero-content text-center text-neutral-content">
-                        <div className="max-w-md">
-                            <h1 className="mb-5 text-5xl font-bold">WELLCOME</h1>
-                            <div>
+                        <div className="max-w-lg">
+                            <h1 className="mb-5 text-4xl font-bold">WELLCOME</h1>
 
+                            <div className='App'>
+                                <h1 style={{ paddingTop: '', margin: 'auto 0', fontWeight: 'normal', fontSize: '50px' }}>
+                                    I`m a  {' '}
+                                    <span style={{ color: 'green', fontWeight: 'bold' }}>
+                                        {/* Style will be inherited from the parent element */}
+                                        <Typewriter
+                                            words={['JUNAYET SHIBLU', 'DEVELOPER', 'FONT-END DESIGNER', 'STUDENT OF CSE DEPARTMENT']}
+                                            loop={true}
+                                            cursor
+                                            cursorStyle='|'
+                                            typeSpeed={100}
+                                            deleteSpeed={100}
+                                            delaySpeed={2000}
+                                        // onLoopDone={handleDone}
+                                        // onType={handleType}
+                                        />
+                                    </span>
+                                </h1>
                             </div>
+
                             <button className="btn btn-outline btn-secondary text-2xl mt-4">Hire me</button>
-                            <div>
-                                <FaChevronDown className='text-4xl text-white ml-28 mt-20' />
+                            <div className='mt-20'>
+                                <FaChevronDown className='text-4xl text-green-600 mx-auto mt-10 focus: mb-5 ' />
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div>
 
-                    <p className='text-3xl font-bold text-center mt-10'>Know Me More</p>
-                    <hr className='text-center bg-black h-1 w-20 mt-2 mx-auto' />
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className='flex-row relative text-center my-12 '>
+                    <h2 className='md:text-8xl text-6xl font-bold opacity-10 md:tracking-[20px] tracking-[9px]   text-light mb-0 mx-auto'>ABOUT ME</h2>
+                    <div className=' absolute md:left-96 left-20 md:-bottom-0 -bottom-1 '>
+                        <p className='md:text-5xl text-4xl font-semibold text-center mt-10'>know Me More</p>
+                        <hr className=' bg-green-400 h-1 w-20 mt-2 mx-auto' />
+                    </div>
 
 
                 </div>
