@@ -19,6 +19,7 @@ import Services from './Services';
 import Resume from './Resume';
 import Skills from './Skills';
 import Porfolio from './Porfolio';
+import Contact from './Contact';
 
 const Navbar = () => {
     const [isActive, setActive] = useState(true)
@@ -35,10 +36,10 @@ const Navbar = () => {
                 </div>
                 <div className='flex gap-2 items-center'>
 
-                    <Link to={'https://www.facebook.com/jsjunayet73?mibextid=ZbWKwL'}>
+                    <Link target={"_blank"} to={'https://www.facebook.com/jsjunayet73?mibextid=ZbWKwL'}>
                         <FaSquareFacebook className='h-5 w-5' />
                     </Link>
-                    <Link to={'https://github.com/jsjunayet'}><FaSquareGithub className='h-5 w-5' />
+                    <Link target={"_blank"} to={'https://github.com/jsjunayet'}><FaSquareGithub className='h-5 w-5' />
                     </Link>
                     <FaTwitter className='h-5 w-5' />
                     <FaLinkedin className='h-5 w-5' />
@@ -78,10 +79,10 @@ const Navbar = () => {
                     <hr />
 
                     <button className='flex gap-3 justify-center text-white w-full items-center px-4 py-2 mt-4'>
-                        <Link to={'https://www.facebook.com/jsjunayet73?mibextid=ZbWKwL'}>
+                        <Link target={"_blank"} to={'https://www.facebook.com/jsjunayet73?mibextid=ZbWKwL'}>
                             <FaSquareFacebook className='text-3xl' />
                         </Link>
-                        <Link to={'https://github.com/jsjunayet'}><FaSquareGithub className='text-3xl' />
+                        <Link target={"_blank"} to={'https://github.com/jsjunayet'}><FaSquareGithub className='text-3xl' />
                         </Link>
                         <FaTwitter className='text-3xl' />
                         <FaLinkedin className='text-3xl' />
@@ -139,6 +140,9 @@ const Navbar = () => {
                 </div>
                 <div>
                     <Porfolio></Porfolio>
+                </div>
+                <div>
+                    <Contact></Contact>
                 </div>
             </div>
         </div >
