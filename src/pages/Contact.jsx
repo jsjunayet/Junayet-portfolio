@@ -3,20 +3,34 @@ import ShareTitle from "../Component/ShareTitle";
 import { BiLogoGmail } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { FaSquareFacebook, FaSquareGithub } from "react-icons/fa6";
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_jtcfjzr', 'template_m58weau', form.current, 'BeNNFtPCQezvr023U')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
     return (
         <div className="bg-[#F8F9FA]">
             <div className=" max-w-5xl mx-auto">
-                <div className="my-12">
+                <div className="my-12 py-5">
                     <ShareTitle opactityTitle={"CONTACT"} Title={"Get in Touch"}></ShareTitle>
                 </div>
-                <div className="flex  gap-20">
-                    <div className=" text-xl font-medium">
-                        <p className="text-2xl font-semibold mb-8">Address</p>
+                <div className="md:flex  mx-3 gap-20">
+                    <div className=" text-xl text-[#323232] font-medium md:w-[35%] w-full">
+                        <p className="text-2xl text-black font-semibold mb-8">Address</p>
                         <p>5th Floor, Plot No.22</p>
-                        <p className="mb-6">Savar,Dhaka,Bangladesh</p>
-                        <div className=" space-y-2">
+                        <p className="mb-8">Savar,Dhaka,Bangladesh</p>
+                        <div className=" space-y-3">
                             <div className="flex gap-2 w-56 justify-center items-center">
                                 <FaPhone className="text-2xl text-green-600"></FaPhone>
                                 <p>(+800) 01640011818</p>
@@ -30,7 +44,7 @@ const Contact = () => {
                                 <p>junayetshiblu0@gmail.com</p>
                             </div>
                         </div>
-                        <div className="mt-6 space-y-2">
+                        <div className="mt-8 space-y-2">
                             <p>Follow Me</p>
                             <div className='flex gap-4 items-center'>
 
@@ -45,12 +59,16 @@ const Contact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="">
-                        <p>Send us a note</p>
-                        <div className="flex gap-4">
-                            <input type="text" placeholder="Name..." className="input input-bordered w-full max-w-xs" />
-                            <input type="text" placeholder="Email..." className="input input-bordered w-full max-w-xs" />
-                        </div>
+                    <div className=" md:w-[60%] w-full">
+                        <p className="text-3xl font-semibold mb-6">Send us a note</p>
+                        <form ref={form} onSubmit={sendEmail}>
+                            <div className="flex gap-4">
+                                <input name="to_names" type="text" placeholder="Name..." className="input input-bordered w-full" />
+                                <input name="from_names" type="text" placeholder="Email..." className="input input-bordered w-full" />
+                            </div>
+                            <textarea name="message" className="textarea textarea-bordered w-full h-40 mt-8" placeholder="Tell us more about your needs..."></textarea>
+                            <input className="btn btn-success btn-outline my-3" value="Send Message" />
+                        </form>
                     </div>
                 </div>
             </div>
