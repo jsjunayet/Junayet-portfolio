@@ -3,18 +3,63 @@ import ShareTitle from "../Component/ShareTitle";
 import { BiLogoGmail } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { FaSquareFacebook, FaSquareGithub } from "react-icons/fa6";
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+    // const [name, setname] = useState('')
+    // const [email, setemail] = useState('')
+    // const [message, setmessage] = useState('')
+    // const handleform = (e) => {
+    //     e.preventDefault();
+    //     const serviceid = 'service_jtcfjzr';
+    //     const templete = 'template_m58weau';
+    //     const api = 'BeNNFtPCQezvr023U'
+    //     const doc = {
+    //         service_id: serviceid,
+    //         template_id: templete,
+    //         user_id: api,
+    //         templeparams: {
+    //             from_name: name,
+    //             from_email: email,
+    //             to_name: "js junayet",
+    //             message: message
+    //         }
+
+    //     }
+
+    //     try {
+    //         const res = axios.post('https://api.emailjs.com/api/v1.0/email/send', doc)
+    //         console.log(res);
+    //         setname('')
+    //         setemail('')
+    //         setmessage('')
+
+    //     }
+    //     catch (error) {
+    //         console.log(error);
+    //     }
+
+    // }
     const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
-
-        emailjs.sendForm('service_jtcfjzr', 'template_m58weau', form.current, 'BeNNFtPCQezvr023U')
+        emailjs.sendForm('service_jtcfjzr',
+            'template_m58weau',
+            form.current,
+            'BeNNFtPCQezvr023U')
             .then((result) => {
-                console.log(result.text);
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Your work has been saved",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+
             }, (error) => {
                 console.log(error.text);
             });
@@ -61,13 +106,13 @@ const Contact = () => {
                     </div>
                     <div className=" md:w-[60%] w-full">
                         <p className="text-3xl font-semibold mb-6">Send us a note</p>
-                        <form ref={form} onSubmit={sendEmail}>
+                        <form ref={form} onSubmit={sendEmail} >
                             <div className="flex gap-4">
-                                <input name="to_names" type="text" placeholder="Name..." className="input input-bordered w-full" />
-                                <input name="from_names" type="text" placeholder="Email..." className="input input-bordered w-full" />
+                                <input name="to_name" type="text" placeholder="Name..." className="input input-bordered w-full" />
+                                <input name="from_name" type="text" placeholder="Email..." className="input input-bordered w-full" />
                             </div>
                             <textarea name="message" className="textarea textarea-bordered w-full h-40 mt-8" placeholder="Tell us more about your needs..."></textarea>
-                            <input className="btn btn-success btn-outline my-3" value="Send Message" />
+                            <button className="btn btn-success btn-outline my-3">Send Message </button>
                         </form>
                     </div>
                 </div>

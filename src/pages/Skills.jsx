@@ -88,7 +88,7 @@ const Skills = () => {
 
                             </div>
                             <a href="/public/junayet-shiblu.pdf" download="junayet resume.pdf">
-                                <button className=' btn btn-outline text-xl btn-accent'>Download CV <FaDownload></FaDownload></button>
+                                <button className=' btn btn-outline text-xl btn-success'>Download CV <FaDownload></FaDownload></button>
                             </a>
 
 

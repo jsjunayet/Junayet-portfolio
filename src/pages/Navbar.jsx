@@ -20,6 +20,7 @@ import Resume from './Resume';
 import Skills from './Skills';
 import Porfolio from './Porfolio';
 import Contact from './Contact';
+import Footer from './Footer';
 
 const Navbar = () => {
     const [isActive, setActive] = useState(true)
@@ -117,7 +118,7 @@ const Navbar = () => {
                                 </h1>
                             </div>
                             <p className='text-3xl font-semibold my-3'>based in Savar, Dhaka, Bangladesh</p>
-                            <button className="btn btn-outline btn-accent text-2xl mt-4">Hire me</button>
+                            <button className="btn btn-outline btn-success text-2xl mt-4">Hire me</button>
                             <div className='mt-20'>
                                 <FaChevronDown className='text-4xl text-green-600 mx-auto mt-10 focus: mb-5 ' />
                             </div>
@@ -143,6 +144,9 @@ const Navbar = () => {
                 </div>
                 <div>
                     <Contact></Contact>
+                </div>
+                <div>
+                    <Footer></Footer>
                 </div>
             </div>
         </div >

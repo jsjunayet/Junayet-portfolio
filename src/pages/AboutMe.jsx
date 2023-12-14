@@ -28,7 +28,7 @@ const AboutMe = () => {
                             <hr />
                             <div>
                                 <a href="/public/junayet-shiblu.pdf" download="junayet resume.pdf">
-                                    <button className=' btn btn-outline text-xl btn-accent'>Download CV</button>
+                                    <button className=' btn btn-outline text-xl btn-success'>Download CV</button>
                                 </a>
                             </div>
 
