@@ -14,7 +14,7 @@ import img7 from "../assets/Screenshot 2023-12-13 232440.png";
 
 const Porfolio = () => {
     return (
-        <section>
+        <section id='portfolio'>
             <div>
                 <ShareTitle opactityTitle={"PORTFOLIO"} Title={"My Work"}></ShareTitle>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-2 mt-10'>

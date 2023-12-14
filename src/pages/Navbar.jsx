@@ -64,16 +64,17 @@ const Navbar = () => {
                     <div>
                         <div className='w-full hidden md:flex flex-col px-4 py-2  justify-center items-center  mx-auto'>
                             <img src={img} className='h-48 object-cover rounded-full border-2 ' alt="" />
-                            <p className='text-xl py-3 text-white font-semibold'>JUNAYET SHIBLU</p>
+                            <p className='text-xl py-2 text-white font-semibold'>JUNAYET SHIBLU</p>
                         </div>
                     </div >
-                    <div className='flex flex-col justify-center text-2xl text-white items-center flex-1 mt-4 space-y-3' >
+                    <div className='flex flex-col justify-center text-2xl text-white items-center flex-1 mt-1 space-y-2' >
                         <a href={'/'}>Home</a>
                         <a href='#aboutme'>About Me</a>
-                        <a>What I Do</a>
-                        <a>Resume</a>
-                        <a>Portfolio</a>
-                        <a>Contact</a>
+                        <a href='#services'>What I Do</a>
+                        <a href='#resume'>Resume</a>
+                        <a href='#skill'>Skills</a>
+                        <a href='#portfolio'>Portfolio</a>
+                        <a href='#contact'>Contact</a>
                     </div>
                 </div >
                 <div>

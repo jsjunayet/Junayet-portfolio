@@ -55,7 +55,7 @@ const Contact = () => {
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
-                    title: "Your work has been saved",
+                    title: "You Success fully send the message",
                     showConfirmButton: false,
                     timer: 1500
                 });
@@ -65,7 +65,7 @@ const Contact = () => {
             });
     };
     return (
-        <div className="bg-[#F8F9FA]">
+        <div id="contact" className="bg-[#F8F9FA]">
             <div className=" max-w-5xl mx-auto">
                 <div className="my-12 py-5">
                     <ShareTitle opactityTitle={"CONTACT"} Title={"Get in Touch"}></ShareTitle>

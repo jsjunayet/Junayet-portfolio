@@ -11,7 +11,7 @@ import { FaDownload } from "react-icons/fa"
 
 const Skills = () => {
     return (
-        <div>
+        <div id="skill">
             <section className=' max-w-5xl mx-auto'>
                 <div className='my-12'>
                     <h1 className='text-3xl text-center font-bold'>My Skills</h1>

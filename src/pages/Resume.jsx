@@ -3,7 +3,7 @@ import ShareTitle from '../Component/ShareTitle';
 
 const Resume = () => {
     return (
-        <div>
+        <div id='resume'>
             <section className=' max-w-5xl mx-auto'>
                 <div>
                     <div className='my-12 pt-5'>
