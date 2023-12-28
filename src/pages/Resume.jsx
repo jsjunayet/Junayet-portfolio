@@ -9,10 +9,10 @@ const Resume = () => {
                     <div className='my-12 pt-5'>
                         <ShareTitle opactityTitle={'SUMMARY'} Title={'My Resume'}></ShareTitle>
                     </div>
-                    <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
+                    <div className=''>
                         <div className='px-3'>
                             <p className='text-2xl font-semibold mb-5'>My Education</p>
-                            <div className=' space-y-3'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                                 <div className='border rounded-xl p-4 space-y-3'>
                                     <button className=' bg-green-600 px-2 py-1 rounded-xl text-sm font-medium text-white'>2022 - 2026</button>
                                     <p>B.Sc in Computer Science and enginering.</p>
@@ -45,9 +45,19 @@ const Resume = () => {
                                         located at Shikarpur, kasba, Brahmanbaria.
                                     </p>
                                 </div>
+                                <div className='border rounded-xl p-4 space-y-3'>
+                                    <button className=' bg-green-600 px-2 py-1 rounded-xl text-sm font-medium text-white'>2015 - 2016</button>
+                                    <p>Junior School Certificate</p>
+                                    <p>Shikarpur High School
+                                    </p>
+                                    <p>
+                                        I completed JSC from Shikarpur High School
+                                        located at Shikarpur, kasba, Brahmanbaria.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div className='px-3'>
+                        {/* <div className='px-3'>
                             <p className='text-2xl font-semibold mb-5'>My Experience</p>
                             <div>
                                 <div className=' space-y-3'>
@@ -83,7 +93,7 @@ const Resume = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

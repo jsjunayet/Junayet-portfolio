@@ -59,6 +59,7 @@ const Contact = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
+                form.current.reset();
 
             }, (error) => {
                 console.log(error.text);

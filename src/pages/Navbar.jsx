@@ -96,11 +96,11 @@ const Navbar = () => {
                 <div className="hero min-h-screen object-center" style={{ backgroundImage: `url(${img3})` }}>
                     <div className="hero-overlay bg-opacity-80"></div>
                     <div className="hero-content text-center text-neutral-content">
-                        <div className="max-w-lg">
-                            <h1 className="mb-5 text-4xl font-bold">WELLCOME</h1>
+                        <div className="md:max-w-lg w-full mx-5">
+                            <h1 className="md:mb-5 mb-2  text-4xl font-bold">WELLCOME</h1>
 
                             <div className='App'>
-                                <h1 style={{ paddingTop: '', margin: 'auto 0', fontWeight: 'normal', fontSize: '50px' }}>
+                                <h1 style={{ paddingTop: '', margin: 'auto 0', fontWeight: 'normal', fontSize: ' 40px' }}>
                                     I`m a  {' '}
                                     <span style={{ color: 'green', fontWeight: 'bold' }}>
                                         {/* Style will be inherited from the parent element */}
@@ -118,7 +118,7 @@ const Navbar = () => {
                                     </span>
                                 </h1>
                             </div>
-                            <p className='text-3xl font-semibold my-3'>based in Savar, Dhaka, Bangladesh</p>
+                            <p className='md:text-3xl text-2xl font-semibold md:my-3 my-2'>based in Savar, Dhaka, Bangladesh</p>
                             <button className="btn btn-outline btn-success text-2xl mt-4">Hire me</button>
                             <div className='mt-20'>
                                 <FaChevronDown className='text-4xl text-green-600 mx-auto mt-10 focus: mb-5 ' />
