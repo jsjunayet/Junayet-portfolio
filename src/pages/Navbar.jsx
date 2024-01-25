@@ -10,7 +10,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaSquareGithub } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
-import img3 from "../assets/programming-background-collage.jpg"
+import img3 from "../assets/bg.jpg"
 import { FaChevronDown } from "react-icons/fa";
 
 import { Typewriter } from 'react-simple-typewriter'
@@ -92,18 +92,15 @@ const Navbar = () => {
                     </button>
                 </div>
             </div >
-            <div className='flex-1  md:ml-64'>
-                <div className="hero min-h-screen object-center" style={{ backgroundImage: `url(${img3})` }}>
-                    <div className="hero-overlay bg-opacity-80"></div>
-                    <div className="hero-content text-center text-neutral-content">
-                        <div className="md:max-w-lg w-full mx-5">
-                            <h1 className="md:mb-5 mb-2  text-4xl font-bold">WELLCOME</h1>
-
+            <div className='flex-1 md:ml-64'>
+                <div className="hero relative bg-cover bg-center md:pt-20 md:pb-16 pt-20 pb-10" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(${img3})` }}>
+                    <div className="hero-content text-center text-neutral-content relative z-10">
+                        <div className="md:max-w-lg w-full mx-5 md:py-20 flex flex-col items-center">
+                            <h1 className="md:mb-5 mb-2 text-4xl font-bold text-white">WELCOME</h1>
                             <div className='App'>
-                                <h1 style={{ paddingTop: '', margin: 'auto 0', fontWeight: 'normal', fontSize: ' 40px' }}>
-                                    I`m a  {' '}
+                                <h1 style={{ margin: 'auto 0', fontWeight: 'normal', fontSize: '40px', color: 'white' }}>
+                                    I`m a{' '}
                                     <span style={{ color: 'green', fontWeight: 'bold' }}>
-                                        {/* Style will be inherited from the parent element */}
                                         <Typewriter
                                             words={['JUNAYET SHIBLU.', 'DEVELOPER.', 'FRONT-END DESIGNER.', 'STUDENT OF CSE DEPARTMENT.']}
                                             loop={true}
@@ -112,44 +109,30 @@ const Navbar = () => {
                                             typeSpeed={100}
                                             deleteSpeed={100}
                                             delaySpeed={2000}
-                                        // onLoopDone={handleDone}
-                                        // onType={handleType}
                                         />
                                     </span>
                                 </h1>
                             </div>
-                            <p className='md:text-3xl text-2xl font-semibold md:my-3 my-2'>based in Savar, Dhaka, Bangladesh</p>
+                            <p className='md:text-3xl text-2xl font-semibold md:my-3 my-2 text-white'>Based in Savar, Dhaka, Bangladesh</p>
                             <button className="btn btn-outline btn-success text-2xl mt-4">Hire me</button>
-                            <div className='mt-20'>
-                                <FaChevronDown className='text-4xl text-green-600 mx-auto mt-10 focus: mb-5 ' />
+                            <div className='mt-5'>
+                                <FaChevronDown className='text-4xl text-green-600 mx-auto mt-10 focus:mb-5' />
                             </div>
-
                         </div>
-
                     </div>
                 </div>
-                <div>
+
+                <div className="md:mx-5 md:my-10">
                     <AboutMe></AboutMe>
-                </div>
-                <div>
                     <Services></Services>
-                </div>
-                <div>
                     <Resume></Resume>
-                </div>
-                <div>
                     <Skills></Skills>
-                </div>
-                <div>
                     <Porfolio></Porfolio>
-                </div>
-                <div>
                     <Contact></Contact>
-                </div>
-                <div>
                     <Footer></Footer>
                 </div>
             </div>
+
         </div >
     );
 };
