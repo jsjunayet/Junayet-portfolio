@@ -108,11 +108,11 @@ const Contact = () => {
                     <div className=" md:w-[60%] w-full">
                         <p className="text-3xl font-semibold mb-6">Send us a note</p>
                         <form ref={form} onSubmit={sendEmail} >
-                            <div className="flex gap-4">
-                                <input name="to_name" type="text" placeholder="Name..." className="input input-bordered w-full" />
-                                <input name="from_name" type="text" placeholder="Email..." className="input input-bordered w-full" />
+                            <div className="md:flex gap-4">
+                                <input name="to_name" type="text" placeholder="Name..." className="input input-bordered w-full mb-5" required />
+                                <input name="from_name" type="text" placeholder="Email..." className="input input-bordered w-full" required />
                             </div>
-                            <textarea name="message" className="textarea textarea-bordered w-full h-40 mt-8" placeholder="Tell us more about your needs..."></textarea>
+                            <textarea name="message" className="textarea textarea-bordered w-full h-40 md:mt-0 mt-5" placeholder="Tell us more about your needs..." required></textarea>
                             <button className="btn btn-success btn-outline my-3">Send Message </button>
                         </form>
                     </div>
